@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<script src="bundle.js"></script>
+		<script src="flashcards.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<title>SS8H10 - Quiz</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	</head>
+	<body>
+		<div class="questionbox">
+			<span id="question" data-index=0>
+				what is correct
+			</span>
+		</div>
+		<div class="buttonbox">
+			<div class="buttonrow">
+				<button onclick="answerQuestion(this)" id="answer1" data-answer=1>
+					answer 1
+				</button>
+				<button onclick="answerQuestion(this)" id="answer2" data-answer=2>
+					answer 2
+				</button>
+			</div>
+			<div class="buttonrow">
+				<button onclick="answerQuestion(this)" id="answer3" data-answer=3>
+					answer 3
+				</button>
+				<button onclick="answerQuestion(this)" id="answer4" data-answer=4>
+					answer 4
+				</button>
+			</div>
+		</div>
+		<button onclick="newQuestion()" style="font-size:20px; left:80%; position:absolute;">
+			new question <span class="material-icons" style="top:4.75px; position:relative;">&#xe863;</span>
+		</button>
+		<script>
+			newQuestion()
+		</script>
+		<div class="correct" style="display:none;">
+			<span style="font-size:55px; display:block; position:relative;">
+				Answered question correctly!
+			</span>
+			<div class="material-icons" style="display:block; position:relative; font-size:72px; ">
+				sentiment_satisfied
+			</div>
+		</div>
+		<div class="incorrect" style="display:none;">
+			<span style="font-size:55px; display:block; position:relative;">
+				Answered question incorrectly!
+			</span>
+			<div class="material-icons" style="display:block; position:relative; font-size:72px; ">
+				sentiment_dissatisfied
+			</div>
+		</div>
+	</body>
+</html>

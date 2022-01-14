@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Noto+Sans+JP&family=Red+Hat+Display&family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@font-face{
+	font-family: 'JetBrains Mono';
+	src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+		 url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	font-family:"Quicksand" !important;
+}
+
+button {
+	border-radius: 10px;
+	text-align: center;
+	border: 0.67rem solid transparent;
+	background-color:#fa1781;
+	font-family:"Quicksand" !important;
+	font-weight:600;
+	font-size:20px;
+	cursor:pointer;
+}
+.buttonrow button {
+	border-radius: 10px;
+	text-align: center;
+	border: 0.67rem solid transparent;
+	background-color:#fa1781;
+	font-family:"Quicksand" !important;
+	font-weight:600;
+	font-size:20px;
+	width:400px;
+	height:75px;
+	cursor:pointer;
+	z-index:10;
+	white-space: nowrap;
+	margin-right:10px;
+}
+
+
+.buttonrow {
+	margin-bottom:15px;
+	display:flex;
+	flex-direction:row;
+}
+.buttonbox {
+	position: absolute;
+	top:69.5%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	display:flex;
+	flex-direction:column;
+	margin-top:20px;
+}
+
+.questionbox {
+	font-size:30px;
+	top:33.5%;
+	transform:translate(-50%, -50%);
+	left:50%;
+	position: absolute;
+	text-align:center;
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 20px;  /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+  
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+  
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+  
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+  }
+
+@keyframes movein {
+	0% {
+		top:200%;
+	}
+	50% {
+		top:50%;
+	}
+	100% {
+		top:200%;
+	}
+}
+
+button:hover {
+	background-color:#e01071;
+}
+
+
+.correct {
+	background-color:mediumseagreen;
+	opacity: .80;
+	z-index: index 150;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:125%;
+	height:125%;
+	transform:translate(-50%, -50%);
+	display:none;
+	animation-timing-function: ease-in-out;
+	animation-direction: reverse;
+	animation-duration: 4.75s;
+	animation-name:movein;
+
+
+}
+.correct span {
+	z-index: index 250;
+	position:absolute;
+	top:50%;
+	left:77.5%;
+	transform:translate(-50%, -50%);
+}
+
+.correct div {
+	z-index: index 250;
+	top:53%;
+	left:98.75%;
+	transform:translate(-50%, -50%);
+	position:absolute;
+}
+
+.incorrect {
+	background-color:rgb(177, 6, 40);
+	opacity: .95;
+	z-index: index 150;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:125%;
+	height:125%;
+	transform:translate(-50%, -50%);
+	display:none;
+	animation-timing-function: ease-in-out;
+	animation-direction: reverse;
+	animation-duration: 4.75s;
+	animation-name:movein;
+
+}
+
+.incorrect span {
+	z-index: index 250;
+	position:absolute;
+	top:50%;
+	left:77.5%;
+	transform:translate(-50%, -50%);
+}
+
+.incorrect div {
+	z-index: index 250;
+	top:53%;
+	left:98.750%;
+	transform:translate(-50%, -50%);
+	position:absolute;
+}
+
+body {
+	overflow:hidden;
+	background-color:rgb(143, 14, 68);
+}
