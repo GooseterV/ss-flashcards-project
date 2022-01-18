@@ -3,7 +3,7 @@ Array.prototype.shuffle = function () {
 		i;
 	while (m) {
 		i = (Math.random() * m--) >>> 0;
-		[this[m], this[i]] = [this[i], this[m]]
+		[this[m], this[i]] = [this[i], this[m]];
 	};
 	return this;
 };
@@ -297,9 +297,9 @@ const flashcards = [{
 	"correct": 0
 }];
 for (let card of flashcards) {
-	let correct = card.answers[card.correct]
-	card.answers.shuffle()
-	card.correct = card.answers.indexOf(correct)
+	let correct = card.answers[card.correct];
+	card.answers.shuffle();
+	card.correct = card.answers.indexOf(correct);
 
 };
-flashcards.shuffle()
+flashcards.shuffle();
