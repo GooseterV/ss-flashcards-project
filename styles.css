@@ -122,6 +122,18 @@ button {
 	}
 }
 
+@keyframes rtg {
+	from {
+		width:100%;
+		color:lime;
+	}
+	
+	to {
+		width:1%;
+		color:red;
+	}
+}
+
 button:hover {
 	background-color: #e01071;
 }

@@ -2,6 +2,9 @@ let streak = 0;
 let correct = 0;
 let incorrect = 0;
 let rate = 100;
+async function sleep(ms) {
+	await new Promise(resolve => setTimeout(resolve, ms));
+};
 async function answerQuestion(button) {
 	const questionelement = document.getElementById("question");
 	const question = flashcards[questionelement.getAttribute("data-index")];
