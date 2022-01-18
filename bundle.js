@@ -1,5 +1,7 @@
 let streak = 0;
-
+let correct = 0;
+let incorrect = 0;
+let rate = 100;
 async function answerQuestion(button) {
 	const questionelement = document.getElementById("question");
 	const question = flashcards[questionelement.getAttribute("data-index")];
@@ -30,7 +32,11 @@ async function answeredCorrectly() {
 	await new Promise(resolve => setTimeout(resolve, 4.725e3));
 	correctbox.style = "display:none;"
 	streak += 1;
+	correct += 1;
+	rate = Math.round((correct/(correct+incorrect))*100)
 	document.getElementById("streakamount").innerText = `Streak - ${streak}`;
+	document.getElementById("correctamount").innerText = `Correct - ${correct}`;
+	document.getElementById("correctrate").innerText = `Correct Rate - ${rate}`;
 	if (streak % 5 == 0) {
 		const streakalert = document.getElementsByClassName("streakalert")[0];
 		async function dostreak(word) {
@@ -68,6 +74,10 @@ async function answeredWrong() {
 	await new Promise(resolve => setTimeout(resolve, 4.735e3));
 	incorrectbox.style = "display:none;";
 	streak = 0;
+	incorrect += 1;
+	rate = Math.round((correct/(correct+incorrect))*100)
 	document.getElementById("streakamount").innerText = `Streak - ${streak}`;
+	document.getElementById("incorrectamount").innerText = `Incorrect - ${incorrect}`;
+	document.getElementById("correctrate").innerText = `Correct Rate - ${rate}`;
 	newQuestion();
 };
