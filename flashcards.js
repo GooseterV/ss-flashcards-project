@@ -160,7 +160,7 @@ const flashcards = [{
 	"answers": ["Erwin Rommel", "Siege", "Anti-Semitism", "Civil Defense"],
 	"correct": 2
 }, {
-	"question": "Victory of Japan, September 2, 1945",
+	"question": "Victory over Japan, September 2, 1945",
 	"answers": ["V-J Day", "Dwight D. Eisenhower", "Nisei", "WACs"],
 	"correct": 0
 }, {
