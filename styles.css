@@ -123,13 +123,13 @@ button:hover {
 	animation-duration: 4.75s;
 	animation-name:movein;
 
-
 }
 .correct span {
 	z-index: index 250;
 	position:absolute;
 	top:50%;
-	left:77.5%;
+	left:50%;
+	text-align: center;
 	transform:translate(-50%, -50%);
 }
 
@@ -163,8 +163,9 @@ button:hover {
 	z-index: index 250;
 	position:absolute;
 	top:50%;
-	left:77.5%;
+	left:50%;
 	transform:translate(-50%, -50%);
+	text-align: center;
 }
 
 .incorrect div {
