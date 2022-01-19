@@ -84,3 +84,17 @@ async function answeredWrong() {
 	document.getElementById("correctrate").innerText = `Correct Rate - ${rate}`;
 	newQuestion();
 };
+
+async function exportStats() {
+	localStorage.streak = streak;
+	localStorage.correct = correct;
+	localStorage.incorrect = incorrect;
+	localStorage.rate = rate;
+};
+
+async function loadStats() {
+	streak = parseInt(localStorage.streak);
+	correct = parseInt(localStorage.correct);
+	incorrect = parseInt(localStorage.incorrect);
+	rate = parseInt(localStorage.rate);
+};
