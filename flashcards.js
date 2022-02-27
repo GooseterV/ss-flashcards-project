@@ -297,7 +297,7 @@ const wwiicards = [{
 	"answers": ["Civil Defense", "IL Duce", "Pearl Harbor", "Battle of the Bulge"],
 	"correct": 0
 }];
-flashcards.concat(wwiicards);
+for (card of wwiicards) flashcards.push(card);
 for (let card of flashcards) {
 	let correct = card.answers[card.correct];
 	card.answers.shuffle();
