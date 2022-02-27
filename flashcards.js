@@ -11,7 +11,7 @@ Array.prototype.shuffle = function () {
 Array.prototype.sample = function () {
 	return this[Math.floor(Math.random() * this.length)];
 };
-const flashcards = [];
+let flashcards = [];
 const wwiicards = [{
 	"question": "an aerial battle fought in World War II in 1940 between the German Luftwaffe (air force), which carried out extensive bombing in Britain, and the British Royal Air Force, which offered successful resistance.",
 	"answers": ["Battle of Britain", "Korematsu v United States", "Appeasement", "Anti-Semitism"],
